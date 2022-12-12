@@ -1,0 +1,254 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+}
+
+header img {
+  position: absolute;
+  margin: 30px;
+  width: 115px;
+  height: 28px;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/side-image-2x.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  background-color: var(--form-background);
+  flex-direction: column;
+  border-radius: 6px;
+  justify-content: center;
+}
+
+.sign-in {
+  display: flex;
+  gap: 10px;
+}
+
+.sign-in h1 {
+  color: var(--text-title);
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-header p {
+  color: var(--text-base);
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
+  color: var(--text-base);
+  font-size: 16px;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  border: 0.5px solid var(--text-base);
+  border-radius: 5px;
+  padding-left: 38px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: var(--text-base);
+  background-color: var(--form-background);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px;
+}
+
+#email {
+  background-image: url("/assets/mail.svg");
+}
+
+#password {
+  background-image: url("/assets/lock.svg");
+  background-position: 10px center;
+  padding-right: 40px;
+}
+
+.input-container img {
+  cursor: pointer;
+  position: absolute;
+  bottom: 11px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.form-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.custom-checkbox {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-template-rows: 20px auto;
+  gap: 0.5em;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.custom-checkbox label {
+  font-size: 13px;
+  color: var(--text-base);
+}
+
+.custom-checkbox .checkmark {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--text-base);
+  border-radius: 5px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background: var(--primary-color) url("/assets/check.svg") center/90% no-repeat;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--form-background);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background-color: var(--background);
+  color: var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+.form a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.sign-up-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  color: var(--primary-color);
+  font-size: 12px;
+  gap: 5px;
+}
+
+#email:focus-within {
+  background-image: url("/assets/mail-focus.svg");
+}
+
+#password:focus-within {
+  background-image: url("/assets/lock-focus.svg");
+}
+
+.input:focus-within {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+@media only screen and (max-width: 800px) {
+  .right {
+    display: none;
+  }
+  .form-container {
+    width: 60%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-container {
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-container {
+    width: 450px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-height: 6500px) {
+  .form-container {
+    height: 400px;
+  }
+}

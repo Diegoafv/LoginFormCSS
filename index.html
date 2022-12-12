@@ -4,9 +4,85 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Login Form CSS</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <img src="/assets/logo.svg" alt="logo" />
+    </header>
+    <main>
+      <div class="content">
+        <div class="left">
+          <div class="form-container">
+            <div class="form-header">
+              <div class="sign-in">
+                <img src="/assets/log-in.svg" alt="sign-in" />
+                <h1>Sign in</h1>
+              </div>
+              <p>Sign in to your account.</p>
+            </div>
+            <form class="form">
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="input-container">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="input"
+                  placeholder="Enter your password"
+                />
+                <img
+                  class="invisible"
+                  src="/assets/eye.svg"
+                  alt="eye"
+                  id="togglePassword"
+                />
+              </div>
+              <div class="form-footer">
+                <div class="remember-me">
+                  <label class="custom-checkbox" for="remember">
+                    <input type="checkbox" name="remember" id="remember" />
+                    <span class="checkmark"></span>
+                    <label for="remember">Remember me</label>
+                  </label>
+                </div>
+                <a href="#">Forgot password?</a>
+              </div>
+              <button class="btn">SIGN IN</button>
+              <div class="sign-up-link">
+                <p>Don't have an account?</p>
+                <a class="sign-up" href="#">Sign up</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="right"></div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
   <script src="script.js"></script>
 </html>
